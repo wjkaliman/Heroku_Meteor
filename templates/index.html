@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Meteorite Landings</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+  <!-- Icons -->
+  <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> <!-- link for flask next line-->
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+  <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+  <style>
+    .fakeimg {
+      height: 200px;
+      background: rgb(199, 203, 241);
+    }
+  </style>
+</head>
+
+<body>
+
+ 
+  </div>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/scatter">Scatter Plots page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/map2">Meteorites Page</a>
+        </li>
+       
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top:30px">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Meteorites have landed!</h2>
+       
+        <div href="static/asset/OIP.jpeg">
+          <img src="static/asset/OIP.jpeg"></div>
+        <p>Click Scatter Plots page or the Meteorites page above for more info.</p>
+        <h3>Fun Links to explore!</h3>
+      
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+         
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.nasa.gov/asteroid-and-comet-watch">Asteriod and comet watch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://data.nasa.gov/Space-Science/Meteorite-Landings/gh4g-9sfh">About this
+              Dataset</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.nasa.gov/multimedia/imagegallery/iotd.html">NASA Image of the
+              Day</a>
+          </li>
+        </ul>
+        <hr class="d-sm-none">
+      </div>
+      <div class="col-sm-8">
+
+       
+        <h2> How many have hit earth in a 10 year period?</h2>
+        
+        <p>Nasa’s Open Data Portal was last update June 27, 2018. The data is current as of 2013. If we go back 10 years,
+          Scientist have documented at least 1150 meteorites that have hit our planet.
+           During this same period,
+          many meteorites have been found but have not been able to be placed at a direct hit locations and remember that 71% of the planet is covered with water.
+          Makes you wonder how many have landed in the oceans or have yet to be discovered?
+        </p>
+        <p>When you look at the Scatterplots page, you will notice the 2 charts. On the first chart, which year had the most meteor hits? The second charts shows the total mass of the Meteorites.
+           Most meteorites are very small. Speaking for myself I'm ok with that!</p>
+        <p> When you look at the Meteorites page,
+          the markers show where the meteorites have hit. Click on a marker. The marker will show the Name, Mass(size), Location, date, and year.
+          You will also notice that in the USA, there was a far greater number of Meteorites that have hit the west
+          coast verses the east coast. </p>
+        <p></p>
+        <p>For this project we created 2 collections in our MongoDB. We then used Python and Flask-PyMongo to create our 2 API’s.  
+          We then used JavaScript, HTML and CSS to create our Webpages. We created 5 JavaScript files, 3 HTML files and 1 CSS file. 
+          Thank you for stopping by.</p>
+        <br>
+      
+      </div>
+    </div>
+
+    <div class="jumbotron text-center" style="margin-bottom:0">
+      <p>Data Analytics Project 2</p>
+      <p>By Rabia Sungur and Warren Judson</p>
+    </div>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+      integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+      crossorigin=""></script>
+
+
+    <!-- Our JavaScript -->
+    <!-- <script type="text/javascript" src="static/js/config.js"></script>
+    <script type="text/javascript" src="static/js/logic.js"></script> -->
+
+    <script src="{{ url_for('static', filename='js/config.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/logic.js') }}"></script>
+ 
+
+
+</body>
+
+</html>
