@@ -4,7 +4,7 @@ function markerSize(mass) {
 
 console.log("hey");
 
-d3.json("api/landing_data")
+d3.json("/api/landing_data")
     .then(function (data) {
         console.log(data);
     })

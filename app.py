@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 # Get connection string for the database
 #app.config["MONGO_URI"] = "mongodb://localhost:27017/meteorite_db"
-app.config["MONGO_URI"] = getenv('MONGO_URI', '')
+#app.config["MONGO_URI"] = getenv('MONGO_URI', '')
+app.config["MONGO_URI"] = "mongodb+srv://wjkaliman:yJxd0xnwXq8cit0R@worldmaps.6tlui.mongodb.net/test?authSource=admin&replicaSet=atlas-12f2r8-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
 
 #use PyMongo to establish Mongo Connection
 mongo = PyMongo(app)
@@ -39,15 +40,17 @@ def map2():
 
 @app.route("/api/landing_data")
 def landing_data():
+    print("landing_data")
     start_date = datetime(2008, 1, 5)
     end_date = datetime(2018, 1, 5)
     landings = mongo.db.landings.find(
         {'year': {'$lt': end_date, '$gt': start_date}}, {'_id': False})
-
+    print(landings)
     bla = [landing for landing in landings]
     ble = {
         "data": bla
     }
+    print(ble)
     return jsonify(ble)
 
 
