@@ -1,4 +1,4 @@
-d3.json("http://localhost:5000/api/landingModified")
+d3.json("api/landingModified")
   .then(function (response) {
     mass = []
     year = []
