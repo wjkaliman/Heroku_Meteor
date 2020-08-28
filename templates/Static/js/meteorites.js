@@ -77,7 +77,7 @@ function createMarkers(meteorHits) {
 
 console.log("hey Joe");
 
-d3.json("http://localhost:5000/api/landing_data")
+d3.json("api/landing_data")
     .then(function (response) {
 
         console.log(response);
