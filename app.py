@@ -10,9 +10,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # Get connection string for the database
-#app.config["MONGO_URI"] = "mongodb://localhost:27017/meteorite_db"
-#app.config["MONGO_URI"] = getenv('MONGO_URI', '')
-app.config["MONGO_URI"] = "mongodb+srv://wjkaliman:yJxd0xnwXq8cit0R@worldmaps.6tlui.mongodb.net/test?authSource=admin&replicaSet=atlas-12f2r8-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+app.config["MONGO_URI"] = getenv('MONGO_URI', '')
+
 
 #use PyMongo to establish Mongo Connection
 mongo = PyMongo(app)
