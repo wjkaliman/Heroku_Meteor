@@ -34,12 +34,13 @@ def scatter():
 
 @app.route("/map2")
 def map2():
+    print("map2")
     return render_template("map2.html")
 
 
 @app.route("/api/landing_data")
 def landing_data():
-    print("landing_data")
+    print("landing_data")    
     start_date = datetime(2008, 1, 5)
     end_date = datetime(2018, 1, 5)
     landings = mongo.db.landings.find(

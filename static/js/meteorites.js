@@ -1,3 +1,4 @@
+console.log("test")
 
 
 
@@ -77,7 +78,7 @@ function createMarkers(meteorHits) {
 
 console.log("hey Joe");
 
-d3.json("http://localhost:5000/api/landing_data")
+d3.json("api/landing_data")
     .then(function (response) {
 
         console.log(response);
@@ -85,6 +86,6 @@ d3.json("http://localhost:5000/api/landing_data")
         Object.entries(response.data[0]).forEach(function ([key, value]) {
             console.log(key, value)
         });
-        // Pull the "Meteorites hits" off of the data
-        createMarkers(response.data)
+       // Pull the "Meteorites hits" off of the data
+       createMarkers(response.data)
     });
